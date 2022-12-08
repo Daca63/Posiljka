@@ -12,6 +12,16 @@ class Posiljka extends Model
 {
     use HasFactory;
 
+    protected $fillable=[
+        'sifraPosiljke',
+        'tezina',
+        'adresa',
+        'kurir_id',
+        'primalac_id'
+
+    ];
+
+
     public function kurir()
     {
         return $this-> belongsTo(Kurir::class);

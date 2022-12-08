@@ -11,6 +11,14 @@ class Primalac extends Model
 {
     use HasFactory;
 
+    protected $fillable=[
+        'ime',
+        'prezime',
+        'brTelefona',
+        'adresa'
+        
+
+    ];
     public function posiljke()
     {
         return $this ->hasMany (Posiljka::class);
